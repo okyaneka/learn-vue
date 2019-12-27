@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn Vue JS - List</title>
+  <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+      <input v-model="list" v-on:keyup.enter="addList">
+      <button v-on:click="addList">+ TAMBAH</button>
+    <the-list :lists="lists"></the-list>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

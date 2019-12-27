@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn Vue JS - List</title>
+  <script src="../../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="angka in angka2">{{ angka }}</li>
+    </ul>
+    <input v-model="angka" v-on:keyup.enter="tambahAngka">
+    <button v-on:click="tambahAngka">+ TAMBAH ANGKA</button>
+    <hr>
+
+    <ol>
+      <li v-for="huruf in huruf2">{{ huruf.name | capitalize }}</li>
+    </ol>
+    <input v-model="huruf" @keyup.enter="tambahHuruf">
+    <button @click="tambahHuruf">+ TAMBAH HURUF</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn Vue JS - Sign Up</title>
+  <script src="../../node_modules/vue/dist/vue.js"></script>
+  <style>
+    .red {
+      color: red;
+    }
+    .green {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>Sign Up</h1>
+    <div>
+      <input v-model="email1" placeholder="email1" :class="[email1.length < 2 ? 'red' : 'green']"><br>
+      <button onclick="alert('Signed up')" v-bind:disabled="email1.length < 2">Submit</button><br>
+    </div>
+
+    <div>
+      <input v-model="email2" placeholder="email2" :class="[email2.length < 2 ? 'red' : 'green']"><br>
+      <button onclick="alert('Signed up')" :disabled="email2.length < 2">Submit</button><br>
+    </div>
+
+    <!-- text and HTML -->
+    <p></p>
+    <p v-text="html"></p>
+    <p v-html="html"></p>
+    <input v-model="html">
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
